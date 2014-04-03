@@ -1,21 +1,20 @@
-# tildify [![Build Status](https://travis-ci.org/sindresorhus/tildify.png?branch=master)](http://travis-ci.org/sindresorhus/tildify)
+# tildify [![Build Status](https://travis-ci.org/sindresorhus/tildify.svg?branch=master)](https://travis-ci.org/sindresorhus/tildify)
 
 > Convert an absolute path to tilde path: `/Users/sindresorhus/dev` => `~/dev`
 
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/tildify)
-
-```
-npm install --save tildify
+```bash
+$ npm install --save tildify
 ```
 
 
-## Example
+## Usage
 
 ```js
 var tildify  = require('tildify');
+
 tildify('/Users/sindresorhus/dev');
 //=> ~/dev
 ```
@@ -23,4 +22,4 @@ tildify('/Users/sindresorhus/dev');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)

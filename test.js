@@ -3,6 +3,8 @@ var test = require('ava');
 var tildify = require('./');
 
 test(function (t) {
-	process.env.HOME = '/Users/sindresorhus';
-	t.assert(tildify('/Users/sindresorhus/dev/tildify') === '~/dev/tildify');
+	var fixture = process.cwd();
+	t.assert(tildify(fixture)[0] === '~');
+	t.assert(/tildify$/.test(tildify(fixture)));
+	t.assert(tildify(fixture) !== fixture);
 });

@@ -1,8 +1,8 @@
 'use strict';
-var assert = require('assert');
-var tildify = require('./index');
+var test = require('ava');
+var tildify = require('./');
 
-it('should convert path to tilde style', function () {
+test(function (t) {
 	process.env.HOME = '/Users/sindresorhus';
-	assert.equal(tildify('/Users/sindresorhus/dev/tildify'), '~/dev/tildify');
+	t.assert(tildify('/Users/sindresorhus/dev/tildify') === '~/dev/tildify');
 });

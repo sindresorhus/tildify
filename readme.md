@@ -2,12 +2,10 @@
 
 > Convert an absolute path to a tilde path: `/Users/sindresorhus/dev` => `~/dev`
 
-See the [untildify](https://github.com/sindresorhus/untildify) module for the inverse.
-
 
 ## Install
 
-```bash
+```sh
 $ npm install --save tildify
 ```
 
@@ -22,6 +20,11 @@ tildify('/Users/sindresorhus/dev');
 ```
 
 
+## Related
+
+See [untildify](https://github.com/sindresorhus/untildify) for the inverse.
+
+
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)

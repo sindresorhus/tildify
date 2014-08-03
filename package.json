@@ -1,6 +1,6 @@
 {
   "name": "tildify",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Convert an absolute path to a tilde path: /Users/sindresorhus/dev => ~/dev",
   "license": "MIT",
   "repository": "sindresorhus/tildify",

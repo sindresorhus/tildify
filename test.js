@@ -7,4 +7,5 @@ test(function (t) {
 	t.assert(tildify(fixture)[0] === '~');
 	t.assert(/tildify$/.test(tildify(fixture)));
 	t.assert(tildify(fixture) !== fixture);
+	t.end();
 });

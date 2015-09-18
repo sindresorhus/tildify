@@ -4,8 +4,6 @@ var osHomedir = require('os-homedir');
 var home = osHomedir();
 
 module.exports = function (str) {
-	str += path.sep;
-	str = str.replace(home + path.sep, '~' + path.sep);
-	str = str.slice(0, -1);
-	return str;
+	str = path.resolve(str) + path.sep;
+	return str.replace(home + path.sep, '~' + path.sep).slice(0, -1);
 };

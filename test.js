@@ -24,3 +24,9 @@ test('ensure only a fully matching path is replaced', function (t) {
 	t.assert(tildify(fixture) === fixture);
 	t.end();
 });
+
+test('ignore relative paths', function (t) {
+	var fixture = 'tildify';
+	t.assert(tildify(fixture) === fixture);
+	t.end();
+});

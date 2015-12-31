@@ -1,32 +1,28 @@
 'use strict';
-var test = require('ava');
-var tildify = require('./');
-var path = require('path');
-var osHomedir = require('os-homedir');
-var home = osHomedir();
+const test = require('ava');
+const tildify = require('./');
+const path = require('path');
+const osHomedir = require('os-homedir');
+const home = osHomedir();
 
-test('tildify home', function (t) {
-	var fixture = home;
-	t.assert(tildify(fixture) === '~');
-	t.end();
+test('tildify home', t => {
+	const fixture = home;
+	t.is(tildify(fixture), '~');
 });
 
-test('tildify path', function (t) {
-	var fixture = path.resolve(home, 'tildify');
-	t.assert(tildify(fixture)[0] === '~');
-	t.assert(/tildify$/.test(tildify(fixture)));
-	t.assert(tildify(fixture) !== fixture);
-	t.end();
+test('tildify path', t => {
+	const fixture = path.resolve(home, 'tildify');
+	t.is(tildify(fixture)[0], '~');
+	t.true(/tildify$/.test(tildify(fixture)));
+	t.not(tildify(fixture), fixture);
 });
 
-test('ensure only a fully matching path is replaced', function (t) {
-	var fixture = path.resolve(home + 'foo', 'tildify');
-	t.assert(tildify(fixture) === fixture);
-	t.end();
+test('ensure only a fully matching path is replaced', t => {
+	const fixture = path.resolve(`${home}foo`, 'tildify');
+	t.is(tildify(fixture), fixture);
 });
 
-test('ignore relative paths', function (t) {
-	var fixture = 'tildify';
-	t.assert(tildify(fixture) === fixture);
-	t.end();
+test('ignore relative paths', t => {
+	const fixture = 'tildify';
+	t.is(tildify(fixture), fixture);
 });

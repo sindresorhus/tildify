@@ -26,3 +26,8 @@ test('ignore relative paths', t => {
 	const fixture = 'tildify';
 	t.is(tildify(fixture), fixture);
 });
+
+test('only tildify when home is at the start of a path', t => {
+	const fixture = path.join('tildify', home);
+	t.is(tildify(fixture), fixture);
+});

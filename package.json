@@ -1,7 +1,7 @@
 {
   "name": "tildify",
   "version": "1.1.2",
-  "description": "Convert an absolute path to a tilde path: /Users/sindresorhus/dev => ~/dev",
+  "description": "Convert an absolute path to a tilde path: `/Users/sindresorhus/dev` → `~/dev`",
   "license": "MIT",
   "repository": "sindresorhus/tildify",
   "author": {
@@ -13,26 +13,29 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
+    "unexpand",
+    "homedir",
     "tilde",
     "tildify",
+    "collapse",
     "path",
     "home",
     "dir",
     "directory",
     "user",
-    "expand",
-    "unexpand"
+    "expand"
   ],
   "dependencies": {
     "os-homedir": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "*"
+    "ava": "*",
+    "xo": "*"
   }
 }

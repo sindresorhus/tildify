@@ -1,7 +1,6 @@
 'use strict';
 var path = require('path');
-var osHomedir = require('os-homedir');
-var home = osHomedir();
+var home = require('os').homedir();
 
 module.exports = function (str) {
 	str = path.normalize(str) + path.sep;

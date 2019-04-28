@@ -1,9 +1,10 @@
 'use strict';
-var path = require('path');
-var osHomedir = require('os-homedir');
-var home = osHomedir();
+const path = require('path');
+const os = require('os');
 
-module.exports = function (str) {
-	str = path.normalize(str) + path.sep;
-	return (str.indexOf(home) === 0 ? str.replace(home + path.sep, '~' + path.sep) : str).slice(0, -1);
+const home = os.homedir();
+
+module.exports = string => {
+	string = path.normalize(string) + path.sep;
+	return (string.indexOf(home) === 0 ? string.replace(home + path.sep, `~${path.sep}`) : string).slice(0, -1);
 };

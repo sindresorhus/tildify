@@ -27,10 +27,10 @@
 		"collapse",
 		"path",
 		"home",
-		"dir",
 		"directory",
 		"user",
-		"expand"
+		"expand",
+		"convert"
 	],
 	"devDependencies": {
 		"ava": "^1.4.1",

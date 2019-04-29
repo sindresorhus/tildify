@@ -9,6 +9,6 @@ tildify('/Users/sindresorhus/dev');
 //=> '~/dev'
 ```
 */
-declare function tildify(string: string): string;
+declare function tildify(absolutePath: string): string;
 
 export = tildify;

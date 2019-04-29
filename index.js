@@ -2,9 +2,12 @@
 const path = require('path');
 const os = require('os');
 
-const home = os.homedir();
+const homeDirectory = os.homedir();
 
-module.exports = string => {
-	string = path.normalize(string) + path.sep;
-	return (string.indexOf(home) === 0 ? string.replace(home + path.sep, `~${path.sep}`) : string).slice(0, -1);
+module.exports = absolutePath => {
+	const normalizedPath = path.normalize(absolutePath) + path.sep;
+
+	return (normalizedPath.indexOf(homeDirectory) === 0 ?
+		normalizedPath.replace(homeDirectory + path.sep, `~${path.sep}`) :
+		normalizedPath).slice(0, -1);
 };

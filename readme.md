@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save tildify
+$ npm install tildify
 ```
 
 

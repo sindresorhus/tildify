@@ -4,10 +4,11 @@
 	"description": "Convert an absolute path to a tilde path: `/Users/sindresorhus/dev` → `~/dev`",
 	"license": "MIT",
 	"repository": "sindresorhus/tildify",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
 		"node": ">=8"

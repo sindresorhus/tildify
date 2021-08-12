@@ -1,4 +1,4 @@
 import {expectType} from 'tsd';
-import tildify = require('.');
+import tildify from './index.js';
 
 expectType<string>(tildify('/Users/sindresorhus/dev'));

@@ -11,7 +11,7 @@ $ npm install tildify
 ## Usage
 
 ```js
-const tildify = require('tildify');
+import tildify from 'tildify';
 
 tildify('/Users/sindresorhus/dev');
 //=> '~/dev'

@@ -1,8 +1,7 @@
-'use strict';
-const path = require('path');
-const os = require('os');
-const test = require('ava');
-const tildify = require('.');
+import path from 'node:path';
+import os from 'node:os';
+import test from 'ava';
+import tildify from './index.js';
 
 const homeDirectory = os.homedir();
 

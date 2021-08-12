@@ -1,13 +1,15 @@
-'use strict';
-const path = require('path');
-const os = require('os');
+import path from 'node:path';
+import os from 'node:os';
 
 const homeDirectory = os.homedir();
 
-module.exports = absolutePath => {
+export default function tildify(absolutePath) {
 	const normalizedPath = path.normalize(absolutePath) + path.sep;
 
-	return (normalizedPath.indexOf(homeDirectory) === 0 ?
-		normalizedPath.replace(homeDirectory + path.sep, `~${path.sep}`) :
-		normalizedPath).slice(0, -1);
-};
+	return (
+		normalizedPath.startsWith(homeDirectory)
+			? normalizedPath.replace(homeDirectory + path.sep, `~${path.sep}`)
+			: normalizedPath
+	)
+		.slice(0, -1);
+}
